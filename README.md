@@ -142,44 +142,48 @@ Esse prompt funciona assim:
 
 4. Ele cria uma página de documentação desse componente dentro do /style-guides
 
-🔗 Acesse o Prompt 2 aqui!
+🔗 [Acesse o Prompt 2 aqui!](./2-new-component.md)
 
 Você vai usar esse prompt várias vezes. Cada vez que precisar de um novo tipo de componente no seu projeto, roda o Prompt 2 com o nome daquele componente.
 
 Por exemplo:
 
-Precisa de tabelas? Roda o Prompt 2 com “table”
+- Precisa de tabelas? Roda o Prompt 2 com “table”
 
-Precisa de gráficos? Roda o Prompt 2 com “bar chart”
+- Precisa de gráficos? Roda o Prompt 2 com “bar chart”
 
-Precisa de formulários complexos? Roda o Prompt 2 com os componentes de form
+- Precisa de formulários complexos? Roda o Prompt 2 com os componentes de form
 
 A beleza disso é que todos os componentes vão seguir automaticamente as variáveis de estilo que você definiu no Prompt 1. Então tudo fica consistente sem você precisar ficar ajustando manualmente.
 
-Prompt 3: Criando páginas com o design system
+# Prompt 3: Criando páginas com o design system
+
 Agora vem a mágica: usar todos esses componentes que você criou para construir as páginas do seu projeto.
 
-img6
-Billing Page criada utilizando o Prompt 3
-Antes desse prompt: instale o MCP do Figma (mesmo processo do MCP do Shadcn). Se você não quiser usar Figma, pode simplesmente anexar screenshots - funciona do mesmo jeito.
+![Billing Page criada utilizando o Prompt 3](./06.jpg)
+
+> Billing Page criada utilizando o Prompt 3
+
+**Antes desse prompt**: instale o MCP do Figma (mesmo processo do MCP do Shadcn). Se você não quiser usar Figma, pode simplesmente anexar screenshots - funciona do mesmo jeito.
 
 O Prompt 3 faz o seguinte:
 
-Você diz qual página quer criar (ex: “billing page”)
+1. Você diz qual página quer criar (ex: “billing page”)
 
-Você envia o design dessa página (URL do Figma ou screenshot)
+2. Você envia o design dessa página (URL do Figma ou screenshot)
 
-Ele usa o MCP do Figma pra acessar as variáveis de estilo e layers do seu design (ou olha o screenshot)
+3. Ele usa o MCP do Figma pra acessar as variáveis de estilo e layers do seu design (ou olha o screenshot)
 
-Ele cria a página importando os componentes do design system que você montou
+4. Ele cria a página importando os componentes do design system que você montou
 
-🔗 Acesse o Prompt 3 aqui!
+🔗 [Acesse o Prompt 3 aqui!](./3-new-page.md)
 
 O legal é que ele não vai criar componentes do zero - ele vai usar os componentes que já existem no seu design system. Então se você criou um componente de tabela no Prompt 2, ele vai importar essa tabela. Se você criou cards, ele importa os cards. Tudo mantendo a consistência.
 
-E se você não tiver um design no Figma? Sem problema. Tira um print de alguma página que você gosta, anexa no prompt, e pede pra ele criar algo parecido usando os componentes do seu design system.
+**E se você não tiver um design no Figma? Sem problema.** Tira um print de alguma página que você gosta, anexa no prompt, e pede pra ele criar algo parecido usando os componentes do seu design system.
 
-O poder do MCP do Figma
+# O poder do MCP do Figma
+
 Deixa eu explicar por que o MCP do Figma é tão importante (e por que eu resisti tanto a usar ele até descobrir o truque).
 
 Muita gente manda screenshots pro coding assistant dizendo “faça o design assim”. O problema é que você tá mandando PIXELS (a imagem) e pedindo pra IA produzir CÓDIGO.
@@ -188,91 +192,78 @@ Aí vira um telefone sem fio: a IA tenta ler os pixels, converter em CSS, e nunc
 
 O MCP do Figma resolve isso porque ele acessa diretamente as VARIÁVEIS DE ESTILO do seu projeto:
 
-Cores exatas em hexadecimal
-
-Bordas e espessuras precisas
-
-Fontes corretas
-
-Espaçamentos em pixels
-
-Componentes agrupados
+- Cores exatas em hexadecimal
+- Bordas e espessuras precisas
+- Fontes corretas
+- Espaçamentos em pixels
+- Componentes agrupados
 
 Então a IA não precisa “adivinhar” como fazer o design - ela tem acesso direto às especificações técnicas.
 
-Dica importante: nomeia bem as layers do seu projeto no Figma. Isso ajuda a IA a não se perder quando ela for olhar pra ele.
+**Dica importante**: nomeia bem as layers do seu projeto no Figma. Isso ajuda a IA a não se perder quando ela for olhar pra ele.
 
 A screenshot of an image gallery next to the codebase. The codebase has a React and Tailwind code representation of the design.
 
-img7
-Exemplo de um código React + Tailwind fornecido por padrão pelo MCP do Figma. As LLMs utilizam esta representação interativa para transformarem esse design em código.
+![código React + Tailwind](./07.jpg)
+
+> Exemplo de um código React + Tailwind fornecido por padrão pelo MCP do Figma. As LLMs utilizam esta representação interativa para transformarem esse design em código.
+
 Recapitulando o workflow completo
 Pra você não esquecer, aqui tá o processo completo:
 
-1. Rode o Prompt 1 uma vez
+1. **Rode o Prompt 1 uma vez**
 
-Envia uma referência visual (Figma ou screenshot do Pinterest)
+   - Envia uma referência visual (Figma ou screenshot do Pinterest)
 
-Ele cria a fundação do seu design system
+   - Ele cria a fundação do seu design system
 
-Você ganha a página /style-guides com cores, tipografia e componentes básicos
+   - Você ganha a página /style-guides com cores, tipografia e componentes básicos
 
-2. Rode o Prompt 2 quantas vezes precisar
+2. **Rode o Prompt 2 quantas vezes precisar**
 
-Cada vez que precisar de um novo tipo de componente
+   - Cada vez que precisar de um novo tipo de componente
 
-Exemplo: “table”, “bar chart”, “accordion”, “dialog”
+   - Exemplo: “table”, “bar chart”, “accordion”, “dialog”
 
-Cada componente ganha sua própria seção no /style-guides
+   - Cada componente ganha sua própria seção no /style-guides
 
-3. Rode o Prompt 3 toda vez que você for criar uma página
+3. **Rode o Prompt 3 toda vez que você for criar uma página**
 
-Envia o design da página (Figma ou screenshot)
+   - Envia o design da página (Figma ou screenshot)
 
-Ele cria a página usando os componentes do design system
+   - Ele cria a página usando os componentes do design system
 
-Tudo fica consistente automaticamente
+   - Tudo fica consistente automaticamente
 
-E se a IA criar componentes do zero ao invés de importar?
+# E se a IA criar componentes do zero ao invés de importar?
+
 Isso pode acontecer às vezes. Se você perceber que o Claude criou um componente novo ao invés de importar um que já existe no seu design system, é só pedir pra ele refatorar:
 
-“Aqui você não importou o componente que eu pedi. Refatora usando o componente X do meu design system.”
+“_Aqui você não importou o componente que eu pedi. Refatora usando o componente X do meu design system._”
 
 Geralmente ele entende e corrige na hora.
 
-Por que isso é revolucionário
+# Por que isso é revolucionário
+
 Historicamente, criar um design system sempre precisou de muitos recursos:
 
-Um designer pra criar os componentes
-
-Um ou mais desenvolvedores pra implementar
-
-Tempo (semanas ou até meses)
-
-Muito alinhamento entre as equipes
+- Um designer pra criar os componentes
+- Um ou mais desenvolvedores pra implementar
+- Tempo (semanas ou até meses)
+- Muito alinhamento entre as equipes
 
 Agora, usando esses 3 prompts, você consegue criar um design system profissional em menos de 30 minutos, sozinho, sem saber design nem ter que codar tudo manualmente.
 
 E o melhor: uma vez criado, você pode reutilizar esse design system em todos os seus projetos. Economiza tempo, economiza tokens, e deixa tudo mais profissional.
 
-Próximos passos
-Se você quer começar a usar essa técnica hoje:
+# Próximos passos
 
-Instala o Claude Code no seu VS Code
+- Se você quer começar a usar essa técnica hoje:
+- Instala o Claude Code no seu VS Code
+- Cria um projeto NextJS com Shadcn e Tailwind
+- Instala os MCPs do Shadcn e Figma
+- Pega uma referência visual que você goste
+- Roda o Prompt 1
 
-Cria um projeto NextJS com Shadcn e Tailwind
-
-Instala os MCPs do Shadcn e Figma
-
-Pega uma referência visual que você goste
-
-Roda o Prompt 1
-
-Assim que você vê o /style-guides rodando com seus design tokens, você vai entender o poder dessa técnica.
-
-E lembra: todos os prompts que eu mostrei aqui vão estar disponíveis nesse link aqui. É só copiar e adaptar pro seu projeto.
-
-Ah, e se você quer ir ainda mais rápido no seu workflow de Vibe Coding, dá uma olhada no Epic. É o app que a gente criou na Donos que transforma suas ideias soltas em prompts técnicos prontos pro Lovable. 92% dos prompts gerados pelo Epic resultam em implementações precisas de primeira.
-
-Até a próxima, gente! Agora vai lá criar design systems lindos 🎨
+Assim que você vê o /style-guides rodando com seus design tokens, você vai entender o poder dessa técnica. 🎨
 
